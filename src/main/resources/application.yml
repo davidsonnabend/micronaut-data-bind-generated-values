@@ -1,0 +1,14 @@
+micronaut:
+  application:
+    name: micronaut-data-bind-generated-values
+datasources:
+  default:
+    url: jdbc:tc:postgresql:14:///postgres
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    schema-generate: NONE
+    db-type: postgres
+    dialect: POSTGRES
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:db/liquibase-changelog.yml'
